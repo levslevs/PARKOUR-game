@@ -1,0 +1,95 @@
+<div id="wrap">
+  <header class="app-header" aria-label="Game header">
+    <a class="brand" href="" aria-label="Parkour Enemies home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>PARKOUR <b>ENEMIES</b></span></a>
+    <div class="header-right"><span class="edition-dot"></span><span class="header-edition">A little leap. A big adventure.</span><button id="btnSound" class="chrome-button" aria-label="Toggle sound" aria-pressed="false">Sound off</button><button id="btnFullscreen" class="chrome-button fullscreen-button" aria-label="Toggle fullscreen" title="Fullscreen">⛶</button><button class="wallet wallet-shop" id="btnWalletShop" type="button" aria-label="Open character shop"><span class="coin-icon" aria-hidden="true">✦</span><b class="coinTotal">0</b><span>Shop ↗</span></button></div>
+  </header>
+  <main id="stage" aria-label="Parkour Enemies game">
+    <canvas id="game" tabindex="-1" width="760" height="560" aria-label="Game world. Use left and right arrows or A and D to move. Space or up arrow to jump."></canvas>
+    <div id="gameTools" hidden><button id="btnGameSound" type="button" aria-label="Toggle game sound" aria-pressed="false">♫ Off</button><button id="btnPause" type="button" aria-label="Pause game" aria-pressed="false">Ⅱ</button></div>
+    <section id="pauseScreen" hidden role="dialog" aria-modal="true" aria-labelledby="pauseTitle"><span class="eyebrow">TAKE A BREATHER</span><h2 id="pauseTitle">Paused.</h2><p>Your adventure is right here.</p><div class="pause-actions"><button id="btnResume" class="btn" type="button">Keep playing <span aria-hidden="true">↗</span></button><button id="btnPauseShop" class="btn secondary" type="button"><span class="coin-icon" aria-hidden="true">✦</span> Character shop <span class="pause-balance"><b class="coinTotal">0</b> coins</span></button><button id="btnPauseMenu" class="btn secondary pause-menu" type="button">End run · Back to menu</button></div><p class="pause-note">Your coins are saved. A new game starts at Round 1.</p></section>
+
+    <div id="pads" hidden>
+      <div class="pad-left">
+        <button class="pad" id="padL" type="button" aria-label="Move left">←</button>
+        <button class="pad" id="padR" type="button" aria-label="Move right">→</button>
+      </div>
+      <button class="pad jump-pad" id="padJ" type="button" aria-label="Jump">↑<span>JUMP</span></button>
+    </div>
+
+    <section class="panel menu-panel" id="menu" aria-label="Main menu">
+      <div class="menu-orbit orbit-one" aria-hidden="true"></div><div class="menu-orbit orbit-two" aria-hidden="true"></div>
+      <div class="menu-copy">
+        <div class="eyebrow"><span></span>AN ISLAND ADVENTURE</div>
+        <h1>PARKOUR<br><em>ENEMIES<span class="title-dot">.</span></em></h1>
+        <p class="menu-intro">Little heroes. <br>Extraordinary jumps.</p>
+        <p class="menu-description">Find your path. Collect the coins. <br>Make every leap count.</p>
+        <div class="menu-actions">
+          <button class="btn play-btn" id="btnPlay"><span class="play-icon" aria-hidden="true">▶</span><span>Let's play</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          <p id="assetStatus" class="asset-status" role="status" aria-live="polite" hidden></p><button id="btnRetryAssets" class="btn secondary asset-retry" type="button" hidden>Retry loading</button>
+          <button class="btn shop-entry" id="btnShop"><span class="coin-icon" aria-hidden="true">✦</span><span>Character shop<small>Spend coins · Unlock your crew</small></span><span class="shop-entry-balance"><b class="coinTotal">0</b> coins</span></button><div class="row menu-links"><button class="btn secondary" id="btnHelp"><span aria-hidden="true">?</span> How to play</button></div>
+        </div>
+        <p id="tip"><span aria-hidden="true">✦</span> 5 rounds. Choose your own path.</p>
+      </div>
+      <div class="hero-scene" aria-label="Meet Blue Cap, Wizard, CR7 and Doughnut">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <span class="scene-star star-a" aria-hidden="true">✦</span><span class="scene-star star-b" aria-hidden="true">✦</span><span class="scene-star star-c" aria-hidden="true">✧</span>
+        <span class="scene-coin coin-a" aria-hidden="true">✦</span><span class="scene-coin coin-b" aria-hidden="true">✦</span><span class="scene-coin coin-c" aria-hidden="true">✦</span>
+        <div class="hero-character hero-wizard"><span class="island island-purple"></span><img data-character="star" alt="Wizard, a friendly purple character with a starry wizard hat" draggable="false"></div>
+        <div class="hero-character hero-blue"><span class="island island-mint"></span><img data-character="blue" alt="Blue Cap, a friendly blue character wearing a cap" draggable="false"></div>
+        <div class="hero-character hero-cr7"><span class="island island-peach"></span><img data-character="fox" alt="CR7, a sporty character wearing a football shirt" draggable="false"></div>
+        <div class="hero-character hero-doughnut"><span class="island island-mint"></span><img data-character="frog" alt="Doughnut, a green character with a pink doughnut on its shirt" draggable="false"></div>
+
+      </div>
+      <div class="menu-bottom"><span>IMAGINATION IN MOTION</span><span>RUN · JUMP · EXPLORE <i aria-hidden="true">↗</i></span></div>
+    </section>
+
+    <section class="panel sheet" id="help" hidden aria-label="How to play">
+      <button class="closeX" data-back aria-label="Close how to play">×</button>
+      <div class="sheet-heading"><span class="eyebrow">A QUICK FIELD GUIDE</span><h2 id="helpTitle" tabindex="-1">Make your next move.</h2><p>Take the high road. Or the low one. It's your adventure.</p></div>
+      <div class="sheetBody">
+        <div class="control-guide"><div><span class="key-pair"><kbd>←</kbd><kbd>→</kbd></span><strong>Find your footing</strong><span>Arrow keys or A / D to move</span></div><div><span class="key-pair"><kbd class="key-space">SPACE</kbd><kbd>↑</kbd></span><strong>Take the leap</strong><span>Space or ↑ to jump</span></div></div>
+        <p class="touch-note">Touch controls: hold ← or → with your left thumb. Hold ↑ with your right thumb to jump farther. Use both at once. Tap Ⅱ to pause or open the shop. Keyboard: Esc pauses. On a phone, turn sideways to play.</p>
+        <div class="guide-section-title">GOOD THINGS TO KNOW <span>COLLECT. BOOST. EXPLORE.</span></div>
+        <div class="legend" id="legend"></div>
+        <div class="guide-note"><span aria-hidden="true">↗</span><p><b>Make the jump your own.</b> Hold jump to go farther; release for a small hop. Follow the mint islands, or take golden ledges for sky stars. Every landing saves your place.</p></div>
+      </div>
+      <button class="btn compact" data-back>Got it. Let's go <span aria-hidden="true">↗</span></button>
+    </section>
+
+    <section class="panel sheet" id="shop" hidden aria-label="Character shop">
+      <button class="closeX" data-back aria-label="Close character shop">×</button>
+      <div class="sheet-heading"><span class="eyebrow">SAME ADVENTURE. YOUR OWN STYLE.</span><h2 id="shopTitle" tabindex="-1">Character shop.</h2><p>Spend your coins to unlock a new hero. All heroes share the same moves.</p></div>
+      <div class="collection-meta"><span>YOUR COINS</span><span class="wallet"><span class="coin-icon" aria-hidden="true">✦</span><b class="coinTotal">0</b><span>coins to spend</span></span></div>
+      <div class="sheetBody"><div class="shop-grid" id="shopGrid"></div></div>
+      <p id="shopStatus" class="shop-status" role="status" aria-live="polite"></p>
+      <button class="btn compact" id="btnCloseShop" data-back>Back to menu</button>
+    </section>
+
+    <section class="panel result-panel" id="clear" hidden aria-label="Round complete">
+      <div class="result-emblem success-emblem" aria-hidden="true">✦</div>
+      <span class="eyebrow">ONE LEAP CLOSER</span><h2 id="clearTitle">Round done!</h2>
+      <p id="clearText">Nice pathing!</p>
+      <button class="btn" id="btnNext">Next round <span aria-hidden="true">↗</span></button>
+      <span class="result-footnote">The adventure keeps going.</span>
+    </section>
+
+    <section class="panel result-panel" id="over" hidden aria-label="Game over">
+      <div class="result-emblem heart-emblem" aria-hidden="true">♥</div>
+      <span class="eyebrow">EVERY HERO TAKES A TUMBLE</span><h2>One more leap?</h2>
+      <p>Out of hearts, full of possibility. <br>Your coins are safe. Try a different path.</p>
+      <button class="btn" id="btnRetry">Try again <span aria-hidden="true">↗</span></button>
+      <button class="btn secondary" data-back>Back to menu</button>
+    </section>
+
+    <section class="panel result-panel win-panel" id="win" hidden aria-label="You won">
+      <div class="result-emblem victory-emblem" aria-hidden="true">★</div>
+      <span class="eyebrow">FIVE ROUNDS. ONE INCREDIBLE HERO.</span><h1>You nailed it<span class="title-dot">.</span></h1>
+      <p>Every gap. Every leap. Every round. <br>You're a parkour star.</p>
+      <div class="wallet result-wallet"><span class="coin-icon" aria-hidden="true">✦</span><b class="coinTotal">0</b><span>coins collected</span></div>
+      <button class="btn" id="btnShop2">Open character shop <span aria-hidden="true">↗</span></button>
+      <button class="btn secondary" data-back>Back to menu</button>
+    </section>
+  </main>
+  <footer class="app-footer"><span class="footer-tagline">A world made for a little wonder.</span><span class="footer-controls"><span><kbd>←</kbd><kbd>→</kbd> move</span><i></i><span><kbd>SPACE</kbd> jump</span></span><span class="footer-number">LET'S MAKE THE LEAP <span aria-hidden="true">↗</span></span></footer>
+</div>
+<section id="rotateScreen" hidden role="dialog" aria-modal="true" aria-labelledby="rotateTitle"><div class="rotate-phone" aria-hidden="true"><span>↻</span></div><span class="eyebrow">A LITTLE MORE ROOM TO JUMP</span><h2 id="rotateTitle">Turn your phone<br>sideways.</h2><p>This adventure plays in landscape.<br>Rotate your phone to continue.</p><span class="rotate-hint">← &nbsp; More room. Better jumps. &nbsp; →</span></section>

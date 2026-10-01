@@ -1,0 +1,26 @@
+{
+  "name": "parkour-enemies-student-kit",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Editable offline Soft 3D platformer with level, mechanics, and touch tests.",
+  "scripts": {
+    "build": "python3 tools/build.py",
+    "serve": "python3 tools/serve.py",
+    "test": "node tests/audit-mechanics.cjs && node tests/verify-touch-mechanics.cjs && node tests/verify-render.cjs && node tests/validate-levels.cjs",
+    "test:mechanics": "node tests/audit-mechanics.cjs",
+    "test:touch": "node tests/verify-touch-mechanics.cjs",
+    "test:levels": "node tests/validate-levels.cjs",
+    "test:browser": "node tests/verify-shop-browser.cjs && node tests/verify-assets-browser.cjs && npm run test:play",
+    "browser:install": "playwright install chromium webkit",
+    "test:render": "node tests/verify-render.cjs",
+    "test:shop": "node tests/verify-shop-browser.cjs",
+    "test:assets": "node tests/verify-assets-browser.cjs",
+    "test:play": "node tests/validate-levels.cjs && node tests/verify-play-browser.cjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

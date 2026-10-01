@@ -1,0 +1,52 @@
+[
+  {
+    "id": "blue",
+    "name": "Blue Cap",
+    "price": 0,
+    "body": "#4cc9ff",
+    "dark": "#1f7fb0",
+    "description": "Every adventure starts with a jump."
+  },
+  {
+    "id": "frog",
+    "name": "Doughnut",
+    "price": 6,
+    "body": "#85e4c7",
+    "dark": "#216c72",
+    "description": "A little sprinkle of adventure."
+  },
+  {
+    "id": "star",
+    "name": "Wizard",
+    "price": 14,
+    "body": "#b38bfa",
+    "dark": "#7251ad",
+    "description": "Make every landing feel magical."
+  },
+  {
+    "id": "fox",
+    "name": "CR7",
+    "price": 24,
+    "body": "#ff5b64",
+    "dark": "#b2314d",
+    "description": "Bring your A-game to the islands."
+  },
+  {
+    "id": "ninja",
+    "name": "Ninja",
+    "price": 36,
+    "body": "#6864a5",
+    "dark": "#383563",
+    "description": "Quiet steps. Bold jumps.",
+    "bonus": true
+  },
+  {
+    "id": "king",
+    "name": "Gold King",
+    "price": 56,
+    "body": "#ffca4b",
+    "dark": "#ad7b2c",
+    "description": "The crowning touch to your collection.",
+    "bonus": true
+  }
+]
