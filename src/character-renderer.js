@@ -5,7 +5,7 @@
     var b = a.crop, sw = b[2]-b[0], sh = b[3]-b[1];
     var scale = h/(a.footY-a.bodyTop);
     c.save(); c.imageSmoothingEnabled = true; c.imageSmoothingQuality = 'high';
-    // Keep shirt lettering readable in either direction; motion supplies the lean.
+    // Keep the portrait consistent in either direction; motion supplies the lean.
     c.drawImage(a.image,b[0],b[1],sw,sh,
       x+w/2-(a.anchorX-b[0])*scale,y+h-sh*scale,sw*scale,sh*scale);
     c.restore();

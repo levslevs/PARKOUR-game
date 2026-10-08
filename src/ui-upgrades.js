@@ -123,7 +123,7 @@
   if(homeLink) homeLink.onclick=function(e){e.preventDefault();goToMenu();};
 
   var soundEnabled=false, audioContext=null;
-  try { soundEnabled=localStorage.getItem('parkourEnemiesSound')==='on'; } catch(e) {}
+  try { soundEnabled=readPreference('parkourEnemiesSound')==='on'; } catch(e) {}
   function playSound(kind) {
     if(!soundEnabled) return;
     try {
@@ -151,7 +151,7 @@
   var soundButton=document.getElementById('btnSound');
   if(soundButton) soundButton.onclick=function() {
     soundEnabled=!soundEnabled;
-    try {localStorage.setItem('parkourEnemiesSound',soundEnabled?'on':'off');} catch(e) {}
+    try {writePreference('parkourEnemiesSound',soundEnabled?'on':'off');} catch(e) {}
     paintSoundButton(); playSound('select');
     if(!gameInputBlocked()) cv.focus({preventScroll:true});
   };

@@ -6,7 +6,7 @@
   "scripts": {
     "build": "python3 tools/build.py",
     "serve": "python3 tools/serve.py",
-    "test": "node tests/audit-mechanics.cjs && node tests/verify-touch-mechanics.cjs && node tests/verify-render.cjs && node tests/validate-levels.cjs",
+    "test": "node tests/audit-mechanics.cjs && node tests/verify-touch-mechanics.cjs && node tests/verify-render.cjs && node tests/validate-levels.cjs && node tests/verify-native-platform.cjs",
     "test:mechanics": "node tests/audit-mechanics.cjs",
     "test:touch": "node tests/verify-touch-mechanics.cjs",
     "test:levels": "node tests/validate-levels.cjs",
@@ -15,7 +15,8 @@
     "test:render": "node tests/verify-render.cjs",
     "test:shop": "node tests/verify-shop-browser.cjs",
     "test:assets": "node tests/verify-assets-browser.cjs",
-    "test:play": "node tests/validate-levels.cjs && node tests/verify-play-browser.cjs"
+    "test:play": "node tests/validate-levels.cjs && node tests/verify-play-browser.cjs",
+    "test:native": "node tests/verify-native-platform.cjs"
   },
   "engines": {
     "node": ">=20"

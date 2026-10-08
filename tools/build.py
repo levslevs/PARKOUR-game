@@ -46,6 +46,7 @@ def function_span(source, name):
     raise RuntimeError(name)
 
 script = SOURCE.read_text(encoding='utf-8')
+script = script.replace('  /* ---------- save ---------- */', (WORK/'platform.js').read_text(encoding='utf-8')+'\n  /* ---------- save ---------- */', 1)
 for name in ('draw', 'drawHud', 'boostBar', 'drawSkyline', 'drawItem', 'drawEnemy',
              'drawTitleScene', 'drawPlayer', 'drawGuy', 'buildShop', 'buildLegend', 'showPanels', 'buildLevel', 'bindPad', 'key', 'loop'):
     a,b = function_span(script,name)

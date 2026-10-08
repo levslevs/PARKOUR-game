@@ -8,3 +8,9 @@ tests/reports/
 .env
 
 .env.*
+
+ios/build/
+*.xcuserstate
+xcuserdata/
+*.xcarchive
+*.ipa

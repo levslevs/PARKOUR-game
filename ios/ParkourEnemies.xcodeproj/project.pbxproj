@@ -1,0 +1,415 @@
+// !$*UTF8*$!
+{
+	"archiveVersion" = 1;
+	"classes" = {
+	};
+	"objectVersion" = 56;
+	"objects" = {
+		"73EBF6644258C120893E685D" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"SWIFT_VERSION" = "5.0";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "16.0";
+				"SDKROOT" = "iphoneos";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"DEVELOPMENT_TEAM" = "R4A779QVVY";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"ALWAYS_SEARCH_USER_PATHS" = "NO";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-Onone";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "DEBUG";
+				"ENABLE_TESTABILITY" = "YES";
+			};
+			"name" = "Debug";
+		};
+		"0B0C687DF8B6B8DC790B519C" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"CLANG_ENABLE_MODULES" = "YES";
+				"CLANG_ENABLE_OBJC_ARC" = "YES";
+				"SWIFT_VERSION" = "5.0";
+				"IPHONEOS_DEPLOYMENT_TARGET" = "16.0";
+				"SDKROOT" = "iphoneos";
+				"TARGETED_DEVICE_FAMILY" = "1,2";
+				"DEVELOPMENT_TEAM" = "R4A779QVVY";
+				"CODE_SIGN_STYLE" = "Automatic";
+				"ALWAYS_SEARCH_USER_PATHS" = "NO";
+				"ENABLE_USER_SCRIPT_SANDBOXING" = "YES";
+				"SWIFT_OPTIMIZATION_LEVEL" = "-O";
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+				"SWIFT_ACTIVE_COMPILATION_CONDITIONS" = "";
+				"ENABLE_TESTABILITY" = "NO";
+			};
+			"name" = "Release";
+		};
+		"76F8DEC3DFE0BDB465198890" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ( "73EBF6644258C120893E685D", "0B0C687DF8B6B8DC790B519C" , );
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"3F52FE937DFBC389DE1D794F" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "ParkourEnemies/AppDelegate.swift";
+			"sourceTree" = "<group>";
+		};
+		"82235BFACDE1D6C15D315B2C" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "3F52FE937DFBC389DE1D794F";
+		};
+		"8C66F8B776ABE392D3D66B30" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "ParkourEnemies/GameViewController.swift";
+			"sourceTree" = "<group>";
+		};
+		"3C7BE90D859C537466A821C6" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "8C66F8B776ABE392D3D66B30";
+		};
+		"1AFB6769429D147501C38014" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "ParkourEnemies/ProgressStore.swift";
+			"sourceTree" = "<group>";
+		};
+		"524E52CCC1EE48CD32C9ECF4" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "1AFB6769429D147501C38014";
+		};
+		"3709AEA5E652968954D24E16" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.html";
+			"path" = "../parkour-enemies.html";
+			"sourceTree" = "<group>";
+		};
+		"77C0B521380705ED6EFF857F" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "3709AEA5E652968954D24E16";
+		};
+		"043F584EA1C937CF665DD21D" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "folder.assetcatalog";
+			"path" = "ParkourEnemies/Assets.xcassets";
+			"sourceTree" = "<group>";
+		};
+		"61EFEBF6CF2FEEA1D4DFDACE" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "043F584EA1C937CF665DD21D";
+		};
+		"FE4A8D160994850F779D567A" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.xml";
+			"path" = "ParkourEnemies/PrivacyInfo.xcprivacy";
+			"sourceTree" = "<group>";
+		};
+		"73A4871A72FABFE98BFB86C5" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "FE4A8D160994850F779D567A";
+		};
+		"FE7ABD0E6FF2A0A12EBAC6AC" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "text.plist.xml";
+			"path" = "ParkourEnemies/Info.plist";
+			"sourceTree" = "<group>";
+		};
+		"898DF016011D2F63FF5A5DEB" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.application";
+			"includeInIndex" = 0;
+			"path" = "ParkourEnemies.app";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"46A4F89D91C131839B32862D" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"MARKETING_VERSION" = "1.0.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "school.wai.parkourenemies";
+				"INFOPLIST_FILE" = "ParkourEnemies/Info.plist";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"LD_RUNPATH_SEARCH_PATHS" = ( "$(inherited)", "@executable_path/Frameworks" , );
+			};
+			"name" = "Debug";
+		};
+		"F627BD03F039729DB86164A6" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"MARKETING_VERSION" = "1.0.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "school.wai.parkourenemies";
+				"INFOPLIST_FILE" = "ParkourEnemies/Info.plist";
+				"ASSETCATALOG_COMPILER_APPICON_NAME" = "AppIcon";
+				"SUPPORTS_MACCATALYST" = "NO";
+				"SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD" = "NO";
+				"LD_RUNPATH_SEARCH_PATHS" = ( "$(inherited)", "@executable_path/Frameworks" , );
+			};
+			"name" = "Release";
+		};
+		"17AAC9205277416F8C982E1A" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ( "46A4F89D91C131839B32862D", "F627BD03F039729DB86164A6" , );
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"DEDF7BE986F8284BF9EFF569" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = ( "82235BFACDE1D6C15D315B2C", "3C7BE90D859C537466A821C6", "524E52CCC1EE48CD32C9ECF4" , );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"08DA27F66944B334E212360E" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (  );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"05C3C3762CEC7617137CA628" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = ( "77C0B521380705ED6EFF857F", "61EFEBF6CF2FEEA1D4DFDACE", "73A4871A72FABFE98BFB86C5" , );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"523B89591606AD164450F31C" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "17AAC9205277416F8C982E1A";
+			"buildPhases" = ( "DEDF7BE986F8284BF9EFF569", "08DA27F66944B334E212360E", "05C3C3762CEC7617137CA628" , );
+			"buildRules" = (  );
+			"dependencies" = (  );
+			"name" = "ParkourEnemies";
+			"productName" = "ParkourEnemies";
+			"productReference" = "898DF016011D2F63FF5A5DEB";
+			"productType" = "com.apple.product-type.application";
+		};
+		"195B53BB2D0F8F57952F8218" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "Tests/ProgressStoreTests.swift";
+			"sourceTree" = "<group>";
+		};
+		"99C76A2964897E12FEE754E8" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "195B53BB2D0F8F57952F8218";
+		};
+		"7201207183783EB31C4F7480" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"includeInIndex" = 0;
+			"path" = "ParkourEnemiesTests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"03122404FB7DD16A70E2C8DA" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"MARKETING_VERSION" = "1.0.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "school.wai.parkourenemies.tests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/ParkourEnemies.app/ParkourEnemies";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"LD_RUNPATH_SEARCH_PATHS" = ( "$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks" , );
+			};
+			"name" = "Debug";
+		};
+		"727BD3EBCF5F589083A4034D" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"MARKETING_VERSION" = "1.0.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "school.wai.parkourenemies.tests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_HOST" = "$(BUILT_PRODUCTS_DIR)/ParkourEnemies.app/ParkourEnemies";
+				"BUNDLE_LOADER" = "$(TEST_HOST)";
+				"LD_RUNPATH_SEARCH_PATHS" = ( "$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks" , );
+			};
+			"name" = "Release";
+		};
+		"35E5CB18EA6DF6218969E15F" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ( "03122404FB7DD16A70E2C8DA", "727BD3EBCF5F589083A4034D" , );
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"D9F6B83B0F7BC5F84E52D298" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = ( "99C76A2964897E12FEE754E8" , );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"DCFFB184F9DB6CE0D68FA039" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (  );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"C9702D84FF933D159AFCB439" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (  );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"9AC2832A90F57158A988D029" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "35E5CB18EA6DF6218969E15F";
+			"buildPhases" = ( "D9F6B83B0F7BC5F84E52D298", "DCFFB184F9DB6CE0D68FA039", "C9702D84FF933D159AFCB439" , );
+			"buildRules" = (  );
+			"dependencies" = ( "E1F026819AC04832580E6448" , );
+			"name" = "ParkourEnemiesTests";
+			"productName" = "ParkourEnemiesTests";
+			"productReference" = "7201207183783EB31C4F7480";
+			"productType" = "com.apple.product-type.bundle.unit-test";
+		};
+		"62D4E3C9AF1CDA8BF9DA21F8" = {
+			"isa" = "PBXFileReference";
+			"lastKnownFileType" = "sourcecode.swift";
+			"path" = "UITests/GameUITests.swift";
+			"sourceTree" = "<group>";
+		};
+		"548525299511437CDDB5831A" = {
+			"isa" = "PBXBuildFile";
+			"fileRef" = "62D4E3C9AF1CDA8BF9DA21F8";
+		};
+		"A3EB3CF5D286CACC8F7C929C" = {
+			"isa" = "PBXFileReference";
+			"explicitFileType" = "wrapper.cfbundle";
+			"includeInIndex" = 0;
+			"path" = "ParkourEnemiesUITests.xctest";
+			"sourceTree" = "BUILT_PRODUCTS_DIR";
+		};
+		"18D0CAAB6971CC37D48D91C3" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"MARKETING_VERSION" = "1.0.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "school.wai.parkourenemies.uitests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_TARGET_NAME" = "ParkourEnemies";
+				"LD_RUNPATH_SEARCH_PATHS" = ( "$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks" , );
+			};
+			"name" = "Debug";
+		};
+		"9FAFA558D272EA0024025C1C" = {
+			"isa" = "XCBuildConfiguration";
+			"buildSettings" = {
+				"PRODUCT_NAME" = "$(TARGET_NAME)";
+				"MARKETING_VERSION" = "1.0.0";
+				"CURRENT_PROJECT_VERSION" = "1";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "school.wai.parkourenemies.uitests";
+				"GENERATE_INFOPLIST_FILE" = "YES";
+				"TEST_TARGET_NAME" = "ParkourEnemies";
+				"LD_RUNPATH_SEARCH_PATHS" = ( "$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks" , );
+			};
+			"name" = "Release";
+		};
+		"7A6A8E2F5B153C526C0C9038" = {
+			"isa" = "XCConfigurationList";
+			"buildConfigurations" = ( "18D0CAAB6971CC37D48D91C3", "9FAFA558D272EA0024025C1C" , );
+			"defaultConfigurationIsVisible" = 0;
+			"defaultConfigurationName" = "Release";
+		};
+		"86EF3E2CAD1198C382522AFC" = {
+			"isa" = "PBXSourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = ( "548525299511437CDDB5831A" , );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"C4D268E9AA5B8115F92B7016" = {
+			"isa" = "PBXFrameworksBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (  );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"3D5A00A566EE8A2F5606462D" = {
+			"isa" = "PBXResourcesBuildPhase";
+			"buildActionMask" = 2147483647;
+			"files" = (  );
+			"runOnlyForDeploymentPostprocessing" = 0;
+		};
+		"58E4886E466754D3AF2C04C8" = {
+			"isa" = "PBXNativeTarget";
+			"buildConfigurationList" = "7A6A8E2F5B153C526C0C9038";
+			"buildPhases" = ( "86EF3E2CAD1198C382522AFC", "C4D268E9AA5B8115F92B7016", "3D5A00A566EE8A2F5606462D" , );
+			"buildRules" = (  );
+			"dependencies" = ( "F73997877A0DD5DBD9DD67E7" , );
+			"name" = "ParkourEnemiesUITests";
+			"productName" = "ParkourEnemiesUITests";
+			"productReference" = "A3EB3CF5D286CACC8F7C929C";
+			"productType" = "com.apple.product-type.bundle.ui-testing";
+		};
+		"07385818BBEC3E006B21F7A5" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "244210E48437B6556980A702";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "523B89591606AD164450F31C";
+			"remoteInfo" = "ParkourEnemies";
+		};
+		"E1F026819AC04832580E6448" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "523B89591606AD164450F31C";
+			"targetProxy" = "07385818BBEC3E006B21F7A5";
+		};
+		"8B14EC25BB453F45DF8870EC" = {
+			"isa" = "PBXContainerItemProxy";
+			"containerPortal" = "244210E48437B6556980A702";
+			"proxyType" = 1;
+			"remoteGlobalIDString" = "523B89591606AD164450F31C";
+			"remoteInfo" = "ParkourEnemies";
+		};
+		"F73997877A0DD5DBD9DD67E7" = {
+			"isa" = "PBXTargetDependency";
+			"target" = "523B89591606AD164450F31C";
+			"targetProxy" = "8B14EC25BB453F45DF8870EC";
+		};
+		"158EFF22A6EF5F98E381D118" = {
+			"isa" = "PBXGroup";
+			"children" = ( "898DF016011D2F63FF5A5DEB", "7201207183783EB31C4F7480", "A3EB3CF5D286CACC8F7C929C" , );
+			"name" = "Products";
+			"sourceTree" = "<group>";
+		};
+		"0D6E4079E36703EBD37C0072" = {
+			"isa" = "PBXGroup";
+			"children" = ( "3F52FE937DFBC389DE1D794F", "8C66F8B776ABE392D3D66B30", "1AFB6769429D147501C38014", "3709AEA5E652968954D24E16", "043F584EA1C937CF665DD21D", "FE4A8D160994850F779D567A", "FE7ABD0E6FF2A0A12EBAC6AC", "195B53BB2D0F8F57952F8218", "62D4E3C9AF1CDA8BF9DA21F8", "158EFF22A6EF5F98E381D118" , );
+			"sourceTree" = "<group>";
+		};
+		"244210E48437B6556980A702" = {
+			"isa" = "PBXProject";
+			"attributes" = {
+				"BuildIndependentTargetsInParallel" = "YES";
+				"LastUpgradeCheck" = "2700";
+				"TargetAttributes" = {
+					"523B89591606AD164450F31C" = {
+						"CreatedOnToolsVersion" = "27.0";
+					};
+					"9AC2832A90F57158A988D029" = {
+						"TestTargetID" = "523B89591606AD164450F31C";
+					};
+					"58E4886E466754D3AF2C04C8" = {
+						"TestTargetID" = "523B89591606AD164450F31C";
+					};
+				};
+			};
+			"buildConfigurationList" = "76F8DEC3DFE0BDB465198890";
+			"compatibilityVersion" = "Xcode 14.0";
+			"developmentRegion" = "en";
+			"hasScannedForEncodings" = 0;
+			"knownRegions" = ( "en", "Base" , );
+			"mainGroup" = "0D6E4079E36703EBD37C0072";
+			"productRefGroup" = "158EFF22A6EF5F98E381D118";
+			"projectDirPath" = "";
+			"projectRoot" = "";
+			"targets" = ( "523B89591606AD164450F31C", "9AC2832A90F57158A988D029", "58E4886E466754D3AF2C04C8" , );
+		};
+	};
+	"rootObject" = "244210E48437B6556980A702";
+}

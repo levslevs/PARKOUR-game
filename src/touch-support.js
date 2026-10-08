@@ -105,3 +105,12 @@
   window.addEventListener('resize',checkOrientation);window.addEventListener('blur',pauseGame);
   document.addEventListener('visibilitychange',function(){if(document.hidden)pauseGame();else requestSceneDraw();});
   checkOrientation();
+
+  window.addEventListener('parkourPause',pauseGame);
+  if(window.parkourNative){
+    document.documentElement.classList.add('native-app');
+    document.getElementById('btnFullscreen').hidden=true;
+    var aboutButton=document.getElementById('btnAbout');
+    aboutButton.hidden=false;
+    aboutButton.onclick=function(){window.webkit.messageHandlers.parkour.postMessage({action:'about'});};
+  }

@@ -6,6 +6,9 @@ A jumping game by Lev. Collect coins, avoid enemies, and unlock characters.
 
 Open `parkour-enemies.html` in your browser. The game works offline.
 
+The universal iPhone and iPad app is in [`ios/`](ios/README.md).
+[Support](docs/support.md) · [Privacy policy](docs/privacy.md)
+
 ## Change the game
 
 - Character names and prices: `src/characters.json`

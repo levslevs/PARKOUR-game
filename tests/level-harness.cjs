@@ -51,7 +51,7 @@ function makeDOM() {
   return { doc, nodes };
 }
 
-function loadGame(filename, initialSave) {
+function loadGame(filename, initialSave, nativeValues) {
   const html = fs.readFileSync(filename, 'utf8');
   const { doc, nodes } = makeDOM();
   const storage = new Map();
@@ -80,6 +80,11 @@ function loadGame(filename, initialSave) {
     matchMedia: () => ({ matches: false, addEventListener() {} }),
   };
   sandbox.window = sandbox; sandbox.globalThis = sandbox; sandbox.self = sandbox;
+  const nativeMessages = [];
+  if (nativeValues) {
+    sandbox.parkourNative = {values: {...nativeValues}};
+    sandbox.webkit = {messageHandlers: {parkour: {postMessage(message) {nativeMessages.push(clone(message));}}}};
+  }
   vm.createContext(sandbox);
   const scripts = [...html.matchAll(/<script\b([^>]*)>([\s\S]*?)<\/script\s*>/gi)];
   let found = false;
@@ -110,7 +115,7 @@ function loadGame(filename, initialSave) {
     vm.runInContext(script, sandbox, { filename: `${path.basename(filename)}:script-${index}`, timeout: 5000 });
   }
   assert.ok(found && sandbox.__game, `${filename}: cannot find original boot marker`);
-  return { ...sandbox.__game, nodes, storage, sandbox };
+  return { ...sandbox.__game, nodes, storage, sandbox, nativeMessages };
 }
 
 /** Snapshots search candidate inputs; committed tests replay actual update() calls. */

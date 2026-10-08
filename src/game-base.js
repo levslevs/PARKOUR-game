@@ -8,7 +8,7 @@
   var save = { coins:0, owned:['blue'], skin:'blue', best:1 };
   function load(){
     try {
-      var raw=localStorage.getItem('parkourEnemies'), d=raw?JSON.parse(raw):null;
+      var raw=readPreference('parkourEnemies'), d=raw?JSON.parse(raw):null;
       if(!d || typeof d!=='object' || Array.isArray(d)) return;
       save.coins=Number.isSafeInteger(d.coins)&&d.coins>=0?d.coins:0;
       var known=SKINS.map(function(s){return s.id;});
@@ -20,7 +20,7 @@
       save.best=Number.isFinite(d.best)?Math.max(1,Math.min(6,Math.floor(d.best))):1;
     } catch(e) {}
   }
-  function store(){ try{ localStorage.setItem('parkourEnemies', JSON.stringify(save)); }catch(e){} }
+  function store(){ try{ writePreference('parkourEnemies', JSON.stringify(save)); }catch(e){} }
 
   /* ---------- skins ---------- */
   var SKINS = [

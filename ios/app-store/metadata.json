@@ -1,0 +1,23 @@
+{
+  "name": "Parkour Enemies",
+  "subtitle": "Jump, collect, find your path",
+  "primaryLanguage": "en-US",
+  "version": "1.0.0",
+  "sku": "waiwai-parkour-enemies-ios",
+  "bundleId": "school.wai.parkourenemies",
+  "publisher": "WaiWai, LLC",
+  "price": "Free",
+  "primaryCategory": "GAMES",
+  "gameCategories": ["GAMES_ADVENTURE", "GAMES_ACTION"],
+  "copyright": "2026 WaiWai, LLC",
+  "supportURL": "https://github.com/levslevs/PARKOUR-game/blob/main/docs/support.md",
+  "privacyPolicyURL": "https://github.com/levslevs/PARKOUR-game/blob/main/docs/privacy.md",
+  "keywords": "platformer,parkour,jump,offline,adventure,coins,islands,arcade,characters",
+  "promotionalText": "A little leap. A big adventure. Explore five island courses, collect coins and unlock a crew of six cheerful heroes. Play offline on iPhone and iPad.",
+  "description": "Find your path. Collect the coins. Make every leap count.\n\nParkour Enemies is a playful platform adventure across floating islands. Jump between ledges, dodge mischievous enemies, pick up boosts and reach the portal at the end of each course.\n\nFIVE COURSES TO EXPLORE\nFollow the main path or take the high route for extra rewards. Each round brings new jumps and a different route to the finish.\n\nMEET YOUR CREW\nCollect coins as you play and unlock six characters. Every hero shares the same moves, so choose your favorite style.\n\nMAKE THE JUMP YOUR OWN\nHold the movement buttons with one hand and jump with the other. Hold jump for a longer leap or release early for a small hop.\n\nPLAY AT YOUR PACE\nPause whenever you like. The game also pauses when you switch apps. Your coins, unlocked characters and best round stay saved on your device. A new run starts at round one.\n\nMADE FOR IPHONE AND IPAD\nPlay in landscape on iPhone, or choose landscape or portrait on iPad. All game content is included and works offline.\n\nFree to play, with no ads, accounts or in-app purchases.",
+  "reviewNotes": "Offline single-player platformer. No login, backend or purchases. All five courses and six character images are bundled. Coins are earned only through gameplay. iPhone supports landscape; iPad supports portrait and landscape. Tap Let's play, hold a direction and tap/hold Jump. Pause opens the pause menu and character shop. About & privacy is available from the main menu. Progress and sound preferences use local UserDefaults. Cartoon enemies can be defeated by jumping on them; there is no blood or realistic injury.",
+  "testFlightWhatToTest": "Please test on both iPhone and iPad: movement and jumping together, all five rounds, sound, pause/resume after switching apps, and character unlocks after closing and reopening the app. Play offline as well. Check that controls remain visible in both iPhone landscape directions and iPad portrait and landscape.",
+  "privacy": "No data collected by the game; no tracking",
+  "ageRatingNote": "Answer the content questionnaire based on the actual game, including mild cartoon/fantasy violence. Use Apple's resulting rating; do not assume 4+.",
+  "availability": "All eligible territories supported by the publisher account; do not make unsupported regulatory declarations."
+}
