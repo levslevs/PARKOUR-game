@@ -1,6 +1,14 @@
-# Release status — October 9, 2026
+# Release status — October 10, 2026
 
 Version 1.0.0, build 1. Publisher: WaiWai, LLC. Free, English, iPhone and iPad. Approved app name: Parkour Enemies. Permission to publish the game and replace the former branded character was confirmed by the requester.
+
+## Paused at the requester's instruction
+
+- On October 10 the requester asked to stop all release work, save progress locally and free memory. Resume only when the requester returns; no unattended work or schedule was created.
+- This MacBook Air has 8 GiB RAM. The remaining iPad simulator (`D831FE1E-F093-4E5C-974A-651794275040`) was shut down, and the Computer Use helper was terminated. Verification found zero booted simulators and no simulator runtime, xcodebuild, xctest or Device Hub process.
+- Do not use Computer Use for App Store Connect. Use the existing direct API first; the requester will perform any required web actions manually. Avoid simulator runs by default and avoid concurrent heavy jobs. Prefer the requester's real iPhone and iPad for remaining testing and screenshots.
+- A read-only API check on October 10 returned HTTP 200 for version 1.0.0 with state `PREPARE_FOR_SUBMISSION`. Existing credentials work; no new key is required for that access. The requester reports having Admin access now, but the new browser role was not independently checked.
+- Local source changes and screenshot are checkpointed without claiming all tests pass. Archives, IPA, test reports and private API configuration are preserved in their existing locations.
 
 ## TestFlight is ready
 
@@ -19,7 +27,8 @@ Version 1.0.0, build 1. Publisher: WaiWai, LLC. Free, English, iPhone and iPad. 
 - Availability saved for all 175 Apple territories, including new territories. This is configured availability, not confirmation that the unreleased app is on sale.
 - Draft review submission: `52af3386-0a5a-43d2-ace7-0cf2ba7ea2be` (`READY_FOR_REVIEW`, no submitted date).
 - Adding the version to that submission returned HTTP 409 with exactly three validation errors: missing iPad 13-inch screenshot, missing accepted large iPhone screenshot, and unpublished App Privacy data-usage answers.
-- The browser session exposes App Privacy as read-only and says Account Holders and Admins are responsible for data disclosures. The requester has been asked to involve an authorized administrator to publish "No, we do not collect data from this app."
+- Since that validation, the large iPhone menu screenshot was uploaded through the API and reached `COMPLETE`: screenshot `39000019-68b7-893d-8037-b3abaf8b66cb`, `APP_IPHONE_67`, 2868 × 1320. Validation has not been retried since this upload.
+- The previous Developer browser session exposed App Privacy as read-only. The requester now reports Admin access. Publishing "No, we do not collect data from this app" remains pending; no supported direct API route has been established in this project. Leave any required browser action to the requester.
 - **Not submitted to Apple yet.** The draft currently has no version item; retry adding the same version after the validation errors are resolved, then submit the existing draft rather than creating another.
 
 ## Completed
@@ -37,10 +46,10 @@ Version 1.0.0, build 1. Publisher: WaiWai, LLC. Free, English, iPhone and iPad. 
 
 ## Verification still pending
 
-- The initial iPhone UI test failed while trying to open the character shop. Subsequent runs were blocked during simulator startup or communication; no successful native UI test is claimed.
+- iPhone UI selectors were corrected for WebKit character cards exposed as switches. The latest interaction test passed purchase and persistence checks but failed waiting for the resume control after tapping Pause. The cause is unresolved; do not describe the full UI suite as passing.
+- The separate iPhone `testStoreScreenshots` passed and captured menu, characters and gameplay using `XCUIScreen.main.screenshot()`. Earlier `app.screenshot()` captures cropped incorrectly and are retained only under `ios/build/rejected-screenshots/`. Additional raw captures need orientation normalization and final checks before upload.
 - iPad UI testing has not completed. Device Hub/CoreSimulator repeatedly became unresponsive, including after a fresh iOS 27 simulator was created.
-- Real-device TestFlight feedback, actual iPhone/iPad screenshots, App Privacy answers and final submission remain pending.
-- A focused retry on iOS 26.5 successfully booted iPhone 17 Pro Max, installed the app and launched it. UI inspection then stopped because the Mac locked; unlocking was requested. The iOS 27 test simulator was shut down.
+- Real-device TestFlight feedback, iPad screenshots, App Privacy answers and final submission remain pending. One accepted iPhone screenshot is already uploaded.
 - No public App Review or external beta review submission has been made.
 
 ## Local artifacts (ignored by Git)
@@ -49,14 +58,17 @@ Version 1.0.0, build 1. Publisher: WaiWai, LLC. Free, English, iPhone and iPad. 
 - Uploaded IPA: `ios/build/export-current/ParkourEnemies.ipa`
 - Export signing summary: `ios/build/export-current/DistributionSummary.plist`
 - Native test reports: `ios/build/*tests.xcresult`
+- Latest UI report: `ios/build/iphone-orientation-tests.xcresult` (one failed interaction test, one passed screenshot test).
+- Resume checkpoint: `ios/build/resume-checkpoint/2026-10-10/` contains raw iPhone captures, useful temporary logs, source diff and local API helpers. Credentials stay outside this folder and outside Git.
+- Accepted iPhone screenshot: `ios/app-store/screenshots/iphone-menu.png`.
 - Source branch: `feature/ios-app-store`. Only support/privacy pages are integrated into main so far.
 
 ## Continue
 
-1. Collect any available real-device feedback using `TESTFLIGHT_CHECKLIST.md`; submission is already authorized.
+1. Wait for the requester to resume. Collect any available real-device feedback using `TESTFLIGHT_CHECKLIST.md`; prior submission authorization remains recorded, but the current stop request takes precedence.
 2. Fix reproduced issues; increase `CURRENT_PROJECT_VERSION` before uploading another build. Build 1 has already been uploaded.
-3. Finish iPhone/iPad visual checks and capture real app screenshots. Xcode 27 uses Device Hub at `/Applications/Xcode.app/Contents/Applications/DeviceHub.app`.
-4. Complete the remaining App Store fields and review the final candidate.
+3. Finish iPhone/iPad visual checks and capture real app screenshots, preferably on the requester's physical devices. Do not restart simulators automatically on this 8 GiB Mac.
+4. Complete the remaining App Store fields through the direct API and review the final candidate. Requester handles browser-only actions such as the pending App Privacy disclosure; no Computer Use.
 5. Add the version to the existing draft and submit it after Apple validation passes. Verify `WAITING_FOR_REVIEW` or `IN_REVIEW`; integrate the verified source change through the repository's normal Git workflow.
 
 Credentials and signing keys remain outside the repository under the user's `.appstoreconnect` directory.
