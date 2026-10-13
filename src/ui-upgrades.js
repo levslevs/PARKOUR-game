@@ -123,7 +123,7 @@
   if(homeLink) homeLink.onclick=function(e){e.preventDefault();goToMenu();};
 
   var soundEnabled=false, audioContext=null;
-  try { soundEnabled=localStorage.getItem('parkourEnemiesSound')==='on'; } catch(e) {}
+  soundEnabled=nativeStorageGet('parkourEnemiesSound')==='on';
   function playSound(kind) {
     if(!soundEnabled) return;
     try {
@@ -151,15 +151,16 @@
   var soundButton=document.getElementById('btnSound');
   if(soundButton) soundButton.onclick=function() {
     soundEnabled=!soundEnabled;
-    try {localStorage.setItem('parkourEnemiesSound',soundEnabled?'on':'off');} catch(e) {}
+    nativeStorageSet('parkourEnemiesSound',soundEnabled?'on':'off');
     paintSoundButton(); playSound('select');
     if(!gameInputBlocked()) cv.focus({preventScroll:true});
   };
   paintSoundButton();
   var fullButton=document.getElementById('btnFullscreen');
   if(fullButton) {
-    if(!document.documentElement.requestFullscreen) fullButton.hidden=true;
+    if(nativeHost||!document.documentElement.requestFullscreen) fullButton.hidden=true;
     fullButton.onclick=function() {
+      if(nativeHost||!document.documentElement.requestFullscreen)return;
       var change=document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen();
       if(change && change.catch) change.catch(function(){});
       if(!gameInputBlocked()) cv.focus({preventScroll:true});

@@ -8,3 +8,10 @@ tests/reports/
 .env
 
 .env.*
+
+# Generated iPad resources and local Xcode state.
+ios/ParkourEnemies/Game/*.html
+ios/build/
+**/xcuserdata/
+*.xcuserstate
+*.xcresult/

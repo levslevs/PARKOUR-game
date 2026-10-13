@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+		7508EF28938C079BDC9AE35F = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = AppDelegate.swift;
+			sourceTree = "<group>";
+		};
+		4A773E63CD4BFAB804764554 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = SceneDelegate.swift;
+			sourceTree = "<group>";
+		};
+		178867000DA71A0107449D89 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GameViewController.swift;
+			sourceTree = "<group>";
+		};
+		0AEAA00F17BED0780E8ACB01 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = NativeSaveStore.swift;
+			sourceTree = "<group>";
+		};
+		4B631F69842530D659306C8F = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		20E338624CEE29D0EFFEAD85 = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder.assetcatalog;
+			path = Assets.xcassets;
+			sourceTree = "<group>";
+		};
+		CF01481F626D5127EC7732FC = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.xml;
+			path = PrivacyInfo.xcprivacy;
+			sourceTree = "<group>";
+		};
+		E3E82846C32567811615378F = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder;
+			path = Game;
+			sourceTree = "<group>";
+		};
+		94D2B8E0EDAC37B3B2B5C4A2 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = NativeSaveStoreTests.swift;
+			sourceTree = "<group>";
+		};
+		8D5093D2C263EEDEAE2010BE = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GameUITests.swift;
+			sourceTree = "<group>";
+		};
+		C9F8DA08D057C2603235FF87 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			path = ParkourEnemies.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6EE402CE49C9254AFD90A53 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			path = ParkourEnemiesTests.xctest;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09E20622E3667B67D1560FB5 = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.cfbundle;
+			path = ParkourEnemiesUITests.xctest;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		13DC383B5E32270AF16099DF = {
+			isa = PBXGroup;
+			children = (
+				7508EF28938C079BDC9AE35F,
+				4A773E63CD4BFAB804764554,
+				178867000DA71A0107449D89,
+				0AEAA00F17BED0780E8ACB01,
+				4B631F69842530D659306C8F,
+				20E338624CEE29D0EFFEAD85,
+				CF01481F626D5127EC7732FC,
+				E3E82846C32567811615378F,
+			);
+			path = ParkourEnemies;
+			sourceTree = "<group>";
+		};
+		B8B3AC829287BCE4E58C4EE5 = {
+			isa = PBXGroup;
+			children = (
+				94D2B8E0EDAC37B3B2B5C4A2,
+			);
+			path = ParkourEnemiesTests;
+			sourceTree = "<group>";
+		};
+		AAB9E3D3F81B26135097A8C5 = {
+			isa = PBXGroup;
+			children = (
+				8D5093D2C263EEDEAE2010BE,
+			);
+			path = ParkourEnemiesUITests;
+			sourceTree = "<group>";
+		};
+		5015CD1BF7713BE910007C79 = {
+			isa = PBXGroup;
+			children = (
+				C9F8DA08D057C2603235FF87,
+				F6EE402CE49C9254AFD90A53,
+				09E20622E3667B67D1560FB5,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FEFA489E25E19BEF8A8A2A9 = {
+			isa = PBXGroup;
+			children = (
+				13DC383B5E32270AF16099DF,
+				B8B3AC829287BCE4E58C4EE5,
+				AAB9E3D3F81B26135097A8C5,
+				5015CD1BF7713BE910007C79,
+			);
+			sourceTree = "<group>";
+		};
+		88783B234DA4EF10482CC4B5 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/../tools/build_ios.py",
+				"$(SRCROOT)/../tools/build.py",
+				"$(SRCROOT)/../src/asset-loader.js",
+				"$(SRCROOT)/../src/character-renderer.js",
+				"$(SRCROOT)/../src/characters.json",
+				"$(SRCROOT)/../src/game-base.js",
+				"$(SRCROOT)/../src/level-layout.js",
+				"$(SRCROOT)/../src/render-support.js",
+				"$(SRCROOT)/../src/shell.html",
+				"$(SRCROOT)/../src/sprite-metadata.json",
+				"$(SRCROOT)/../src/theme.css",
+				"$(SRCROOT)/../src/touch-support.js",
+				"$(SRCROOT)/../src/ui-upgrades.js",
+				"$(SRCROOT)/../src/world-renderer.js",
+				"$(SRCROOT)/../assets/blue.png",
+				"$(SRCROOT)/../assets/fox.png",
+				"$(SRCROOT)/../assets/frog.png",
+				"$(SRCROOT)/../assets/king.png",
+				"$(SRCROOT)/../assets/ninja.png",
+				"$(SRCROOT)/../assets/star.png",
+			);
+			name = "Build offline game";
+			outputPaths = (
+				"$(SRCROOT)/ParkourEnemies/Game/parkour-enemies.html",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\"\npython3 \"$SRCROOT/../tools/build_ios.py\"\n";
+		};
+		B2FFC971864C745854965D07 = {
+			isa = PBXBuildFile;
+			fileRef = 7508EF28938C079BDC9AE35F;
+		};
+		172041DF0C9BD8E907D02637 = {
+			isa = PBXBuildFile;
+			fileRef = 4A773E63CD4BFAB804764554;
+		};
+		BA30263FF2897C737D8E941C = {
+			isa = PBXBuildFile;
+			fileRef = 178867000DA71A0107449D89;
+		};
+		EEBDC0478E53535CA4E94841 = {
+			isa = PBXBuildFile;
+			fileRef = 0AEAA00F17BED0780E8ACB01;
+		};
+		7FF8C9FC6B7E2F79F2A9323E = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2FFC971864C745854965D07,
+				172041DF0C9BD8E907D02637,
+				BA30263FF2897C737D8E941C,
+				EEBDC0478E53535CA4E94841,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		89BA70CDC82F46E3D1AF1EFA = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94ED65AB1CFCC3E6EB5A5150 = {
+			isa = PBXBuildFile;
+			fileRef = 20E338624CEE29D0EFFEAD85;
+		};
+		0764A8F8ED08BB24914BB58E /* PrivacyInfo.xcprivacy in Resources */ = {
+			isa = PBXBuildFile;
+			fileRef = CF01481F626D5127EC7732FC;
+		};
+		29FE3D2F1D1D01ECE2ADD0EF = {
+			isa = PBXBuildFile;
+			fileRef = E3E82846C32567811615378F;
+		};
+		ACA16EC71E4125BC7D8202DD = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94ED65AB1CFCC3E6EB5A5150,
+				0764A8F8ED08BB24914BB58E,
+				29FE3D2F1D1D01ECE2ADD0EF,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FE44C1D4108931802BC082F = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ParkourEnemies/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lev.parkourenemies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				ENABLE_TESTABILITY = YES;
+			};
+			name = Debug;
+		};
+		A8C4CABD5DA2B1F3DAB7CD6F = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				MARKETING_VERSION = 1.0;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ParkourEnemies/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lev.parkourenemies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = Release;
+		};
+		FC7A9A3AB9DDE797BD5785B5 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FE44C1D4108931802BC082F,
+				A8C4CABD5DA2B1F3DAB7CD6F,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FC2453ED5EBF1568058C839 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC7A9A3AB9DDE797BD5785B5;
+			buildPhases = (
+				88783B234DA4EF10482CC4B5,
+				7FF8C9FC6B7E2F79F2A9323E,
+				89BA70CDC82F46E3D1AF1EFA,
+				ACA16EC71E4125BC7D8202DD,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParkourEnemies;
+			productName = ParkourEnemies;
+			productReference = C9F8DA08D057C2603235FF87;
+			productType = "com.apple.product-type.application";
+		};
+		A8FD7B9719BA7AC29270BCCE = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lev.parkourenemiestests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkourEnemies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ParkourEnemies";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				ENABLE_TESTABILITY = YES;
+			};
+			name = Debug;
+		};
+		E388B04E78D8071B4964CA41 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lev.parkourenemiestests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParkourEnemies.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ParkourEnemies";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = Release;
+		};
+		0FFCB5B0362FE3A729DE5C85 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8FD7B9719BA7AC29270BCCE,
+				E388B04E78D8071B4964CA41,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99F7735122EE651002C194B7 = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC2453ED5EBF1568058C839;
+			remoteInfo = ParkourEnemies;
+		};
+		2636330F8EEB92BC886945D7 = {
+			isa = PBXTargetDependency;
+			target = 8FC2453ED5EBF1568058C839;
+			targetProxy = 99F7735122EE651002C194B7;
+		};
+		F72960AF07F27CB5D5DFE003 = {
+			isa = PBXBuildFile;
+			fileRef = 94D2B8E0EDAC37B3B2B5C4A2;
+		};
+		33B40187BD21826C7ADAA519 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F72960AF07F27CB5D5DFE003,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		266073EC1D1D4D995B61D2F0 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D35F69698703B1559BAA8AD7 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C5ACED5DFD4FA4D5FFECCDA4 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FFCB5B0362FE3A729DE5C85;
+			buildPhases = (
+				33B40187BD21826C7ADAA519,
+				266073EC1D1D4D995B61D2F0,
+				D35F69698703B1559BAA8AD7,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2636330F8EEB92BC886945D7,
+			);
+			name = ParkourEnemiesTests;
+			productName = ParkourEnemiesTests;
+			productReference = F6EE402CE49C9254AFD90A53;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		91F009154D6F5D7FABDD6F0A = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lev.parkourenemiesuitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ParkourEnemies;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				ENABLE_TESTABILITY = YES;
+			};
+			name = Debug;
+		};
+		11BEE781B8F464380800E497 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lev.parkourenemiesuitests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ParkourEnemies;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = Release;
+		};
+		8D657200D54A2B4FB67349D9 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91F009154D6F5D7FABDD6F0A,
+				11BEE781B8F464380800E497,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11F2544B935C661EEB817FAC = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC2453ED5EBF1568058C839;
+			remoteInfo = ParkourEnemies;
+		};
+		4B0AAC668D994452F997C238 = {
+			isa = PBXTargetDependency;
+			target = 8FC2453ED5EBF1568058C839;
+			targetProxy = 11F2544B935C661EEB817FAC;
+		};
+		DBC2B6FF4550521150FE6A02 = {
+			isa = PBXBuildFile;
+			fileRef = 8D5093D2C263EEDEAE2010BE;
+		};
+		B3A9055E3B625DEE2E44F981 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC2B6FF4550521150FE6A02,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F681EF2072CEC720219993A6 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65D44FB6F704B86CFB8382E5 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F28B7E833A96FAD58D3BCCC1 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D657200D54A2B4FB67349D9;
+			buildPhases = (
+				B3A9055E3B625DEE2E44F981,
+				F681EF2072CEC720219993A6,
+				65D44FB6F704B86CFB8382E5,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B0AAC668D994452F997C238,
+			);
+			name = ParkourEnemiesUITests;
+			productName = ParkourEnemiesUITests;
+			productReference = 09E20622E3667B67D1560FB5;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		40609A412964FFB79DAE9C3A = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				ENABLE_TESTABILITY = YES;
+			};
+			name = Debug;
+		};
+		24B7DFA423B1C8A2130AE03E = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				TARGETED_DEVICE_FAMILY = 2;
+				SWIFT_VERSION = 5.0;
+				CLANG_ENABLE_MODULES = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+			};
+			name = Release;
+		};
+		D567EBC7E7BFA1D0FEC0A634 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40609A412964FFB79DAE9C3A,
+				24B7DFA423B1C8A2130AE03E,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98F54143AB4E86B28C3AFEE0 = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					8FC2453ED5EBF1568058C839 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					C5ACED5DFD4FA4D5FFECCDA4 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 8FC2453ED5EBF1568058C839;
+					};
+					F28B7E833A96FAD58D3BCCC1 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 8FC2453ED5EBF1568058C839;
+					};
+				};
+			};
+			buildConfigurationList = D567EBC7E7BFA1D0FEC0A634;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7FEFA489E25E19BEF8A8A2A9;
+			productRefGroup = 5015CD1BF7713BE910007C79;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FC2453ED5EBF1568058C839,
+				C5ACED5DFD4FA4D5FFECCDA4,
+				F28B7E833A96FAD58D3BCCC1,
+			);
+		};
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0;
+}

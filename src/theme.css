@@ -95,3 +95,54 @@ html{overscroll-behavior:none}body.is-playing,body.needs-rotation{overflow:hidde
  #menu:has(#assetStatus:not([hidden])) .menu-copy{align-self:start;padding-top:12px;padding-bottom:12px}
 }
 .hero-character img:not([src]){visibility:hidden}
+
+/* The bundled iPad app fits inside the home indicator and multitasking viewport. */
+html.native-ios,body.native-ios{height:100%;overflow:hidden;overscroll-behavior:none}
+body.native-ios #wrap{
+ --native-width:calc(100vw - 40px - env(safe-area-inset-left,0px) - env(safe-area-inset-right,0px));
+ --native-height:calc(100svh - 32px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));
+ --stage-width:min(1080px,calc((var(--native-height) - 60px)*760/560),var(--native-width));
+ height:100svh;min-height:0;justify-content:center;gap:16px;
+ padding:calc(16px + env(safe-area-inset-top,0px)) calc(20px + env(safe-area-inset-right,0px)) calc(16px + env(safe-area-inset-bottom,0px)) calc(20px + env(safe-area-inset-left,0px));
+}
+body.native-ios .fullscreen-button,body.native-ios .footer-controls{display:none}
+body.native-ios .pad{width:72px;height:72px;border-radius:22px;font-size:34px;background:#293e59e8;border-color:#badedc70;box-shadow:0 4px 0 #0c172a,inset 0 1px #ffffff3b;-webkit-touch-callout:none}
+body.native-ios .pad-left{gap:16px}
+body.native-ios .jump-pad{width:90px;height:82px;grid-template-rows:42px 16px;padding-top:4px;background:#418370ef;border-color:#bdf3d3}
+body.native-ios .jump-pad span{font-size:10px}
+body.native-ios .pad.pressed{background:#b8f8dd80;box-shadow:0 1px 0 #0e163847,inset 0 1px #ffffff6b}
+body.native-ios .chrome-button,body.native-ios .closeX,body.native-ios .btn.secondary{min-height:44px}
+body.native-ios .closeX{min-width:44px}
+body.native-ios #stage:has(.panel:not([hidden])){width:min(1080px,var(--native-width));height:min(780px,calc(var(--native-height) - 60px));min-height:0;max-height:none;aspect-ratio:auto}
+body.native-ios #stage:has(.panel:not([hidden]))>#game{position:absolute;inset:0;object-fit:cover}
+body.native-ios #pads{padding:14px 20px 18px}
+@media(orientation:portrait){
+ body.native-ios.is-playing #wrap{--stage-width:min(1080px,calc((var(--native-height) - 174px)*760/560),var(--native-width));gap:16px}
+ body.native-ios.is-playing #stage{margin-bottom:112px;overflow:visible}
+ body.native-ios.is-playing #game{border-radius:24px}
+ body.native-ios.is-playing #pads{bottom:-112px;padding:12px 4px}
+ body.native-ios.is-playing .app-footer{display:none}
+}
+@media(max-width:700px){
+ body.native-ios #menu{display:flex;align-items:stretch;justify-content:flex-start;overflow-y:auto}
+ body.native-ios .menu-copy{position:relative;margin:0;padding:26px 24px 20px;width:100%;flex:none}
+ body.native-ios .menu-copy .eyebrow{margin-bottom:12px}
+ body.native-ios .menu-copy h1{font-size:clamp(30px,7vw,44px)}
+ body.native-ios .menu-intro{font-size:16px;margin-top:12px}
+ body.native-ios .menu-description{font-size:11px;margin-top:6px;display:block}
+ body.native-ios .menu-actions{position:static;max-width:none;margin-top:18px}
+ body.native-ios .hero-scene{position:relative;inset:auto;margin:0 6% 22px;height:180px;min-height:180px;flex:none}
+ body.native-ios .menu-bottom{display:none}
+ body.native-ios .app-footer{display:none}
+}
+@media(orientation:landscape) and (max-height:600px){
+ body.native-ios.is-playing #wrap{--stage-width:min(calc(var(--native-height)*760/560),calc(var(--native-width) - 176px));gap:0}
+ body.native-ios.is-playing .app-header,body.native-ios.is-playing .app-footer{display:none}
+ body.native-ios.is-playing #stage{overflow:visible;border-radius:16px}
+ body.native-ios.is-playing #game{border-radius:16px}
+ body.native-ios.is-playing #pads{position:fixed;inset:auto 0 0;padding:0 calc(14px + env(safe-area-inset-right,0px)) calc(22px + env(safe-area-inset-bottom,0px)) calc(14px + env(safe-area-inset-left,0px))}
+ body.native-ios.is-playing .pad-left{flex-direction:column;gap:12px}
+ body.native-ios.is-playing .pad{width:64px;height:64px;border-radius:20px;font-size:30px}
+ body.native-ios.is-playing .jump-pad{width:76px;height:80px;grid-template-rows:36px 14px}
+ body.native-ios.is-playing #gameTools{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));flex-direction:column;gap:7px}
+}

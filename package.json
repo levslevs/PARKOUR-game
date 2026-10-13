@@ -5,10 +5,12 @@
   "description": "Editable offline Soft 3D platformer with level, mechanics, and touch tests.",
   "scripts": {
     "build": "python3 tools/build.py",
+    "build:ios": "python3 tools/build_ios.py",
     "serve": "python3 tools/serve.py",
-    "test": "node tests/audit-mechanics.cjs && node tests/verify-touch-mechanics.cjs && node tests/verify-render.cjs && node tests/validate-levels.cjs",
+    "test": "node tests/audit-mechanics.cjs && node tests/verify-touch-mechanics.cjs && node tests/verify-render.cjs && node tests/validate-levels.cjs && node tests/verify-ios-support.cjs",
     "test:mechanics": "node tests/audit-mechanics.cjs",
     "test:touch": "node tests/verify-touch-mechanics.cjs",
+    "test:ios": "python3 tests/verify-ios-package.py && node tests/verify-ios-support.cjs",
     "test:levels": "node tests/validate-levels.cjs",
     "test:browser": "node tests/verify-shop-browser.cjs && node tests/verify-assets-browser.cjs && npm run test:play",
     "browser:install": "playwright install chromium webkit",

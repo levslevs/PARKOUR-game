@@ -5,10 +5,34 @@
   var W = 760, H = 560;
 
   /* ---------- save ---------- */
+  var nativeHost=window.__PARKOUR_IOS__===true;
+  function postToNative(message){
+    if(!nativeHost)return;
+    try{
+      var handler=window.webkit&&window.webkit.messageHandlers&&window.webkit.messageHandlers.parkour;
+      if(handler&&typeof handler.postMessage==='function')handler.postMessage(message);
+    }catch(e){}
+  }
+  function nativeStorageGet(key){
+    // The iPad app restores its durable save before this script starts.
+    if(nativeHost&&window.__PARKOUR_SAVED__){
+      var value=window.__PARKOUR_SAVED__[key];
+      return typeof value==='string'?value:null;
+    }
+    try{return localStorage.getItem(key);}catch(e){return null;}
+  }
+  function nativeStorageSet(key,value){
+    value=String(value);
+    try{localStorage.setItem(key,value);}catch(e){}
+    if(nativeHost){
+      if(window.__PARKOUR_SAVED__)window.__PARKOUR_SAVED__[key]=value;
+      postToNative({type:'storage',key:key,value:value});
+    }
+  }
   var save = { coins:0, owned:['blue'], skin:'blue', best:1 };
   function load(){
     try {
-      var raw=localStorage.getItem('parkourEnemies'), d=raw?JSON.parse(raw):null;
+      var raw=nativeStorageGet('parkourEnemies'), d=raw?JSON.parse(raw):null;
       if(!d || typeof d!=='object' || Array.isArray(d)) return;
       save.coins=Number.isSafeInteger(d.coins)&&d.coins>=0?d.coins:0;
       var known=SKINS.map(function(s){return s.id;});
@@ -20,7 +44,7 @@
       save.best=Number.isFinite(d.best)?Math.max(1,Math.min(6,Math.floor(d.best))):1;
     } catch(e) {}
   }
-  function store(){ try{ localStorage.setItem('parkourEnemies', JSON.stringify(save)); }catch(e){} }
+  function store(){nativeStorageSet('parkourEnemies',JSON.stringify(save));}
 
   /* ---------- skins ---------- */
   var SKINS = [

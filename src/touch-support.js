@@ -41,7 +41,7 @@
 
   var orientationBlocked=false,userPaused=false,frameTime=null,frameRemainder=0,sceneDirty=true;
   function requestSceneDraw(){sceneDirty=true;}
-  function gameInputBlocked(){return G.mode!=='play'||orientationBlocked||userPaused||document.hidden;}
+  function gameInputBlocked(){return G.mode!=='play'||orientationBlocked||userPaused||document.hidden||(nativeHost&&window.__PARKOUR_ACTIVE__===false);}
   function resetFrameClock(){frameTime=null;frameRemainder=0;sceneDirty=true;if(typeof resetRenderState==='function')resetRenderState();}
   function releaseControls(){
     Object.keys(inputOwners).forEach(function(action){inputOwners[action].clear();});
@@ -62,7 +62,7 @@
     if(G.mode==='play'&&!orientationBlocked&&!document.hidden)document.getElementById('btnResume').focus({preventScroll:true});
   }
   function resumeGame(){
-    if(orientationBlocked||document.hidden||G.mode!=='play')return;
+    if(orientationBlocked||document.hidden||G.mode!=='play'||(nativeHost&&window.__PARKOUR_ACTIVE__===false))return;
     userPaused=false;releaseControls();resetFrameClock();refreshTouchUI();cv.focus({preventScroll:true});
   }
   function checkOrientation(){
@@ -70,7 +70,7 @@
     var screenSize=window.screen,shortEdge=screenSize&&screenSize.width&&screenSize.height?
       Math.min(screenSize.width,screenSize.height):Math.min(window.innerWidth,window.innerHeight);
     var phone=/iPhone|iPod|Android.+Mobile/i.test(navigator.userAgent||'')||shortEdge<600;
-    var blocked=touch&&phone&&window.innerHeight>window.innerWidth;
+    var blocked=!nativeHost&&touch&&phone&&window.innerHeight>window.innerWidth;
     if(blocked!==orientationBlocked){orientationBlocked=blocked;if(G.mode==='play')userPaused=true;releaseControls();resetFrameClock();}
     document.getElementById('rotateScreen').hidden=!blocked;document.getElementById('wrap').inert=blocked;
     document.body.classList.toggle('needs-rotation',blocked);refreshTouchUI();
@@ -96,12 +96,35 @@
   var touchOriginalShowPanels=showPanels;
   showPanels=function(){touchOriginalShowPanels();if(G.mode!=='play')releaseControls();refreshTouchUI();fitCanvas();};
   var touchOriginalStartRound=startRound;
-  startRound=function(round){userPaused=false;releaseControls();resetFrameClock();touchOriginalStartRound(round);checkOrientation();if(!orientationBlocked)cv.focus({preventScroll:true});};
+  startRound=function(round){userPaused=false;releaseControls();resetFrameClock();touchOriginalStartRound(round);checkOrientation();if(nativeHost&&window.__PARKOUR_ACTIVE__===false)pauseGame();if(!orientationBlocked)cv.focus({preventScroll:true});};
   var touchOriginalUpdate=update;
   update=function(){if(!gameInputBlocked())touchOriginalUpdate();};
   cv.tabIndex=0;
   document.getElementById('btnPause').onclick=pauseGame;document.getElementById('btnResume').onclick=resumeGame;
   document.getElementById('btnGameSound').onclick=function(){document.getElementById('btnSound').click();};
   window.addEventListener('resize',checkOrientation);window.addEventListener('blur',pauseGame);
+  window.addEventListener('pagehide',pauseGame);
   document.addEventListener('visibilitychange',function(){if(document.hidden)pauseGame();else requestSceneDraw();});
+  if(nativeHost){
+    document.documentElement.classList.add('native-ios');document.body.classList.add('native-ios');
+    var nativeViewportWidth=window.innerWidth,nativeViewportHeight=window.innerHeight;
+    window.addEventListener('resize',function(){
+      if(window.innerWidth!==nativeViewportWidth||window.innerHeight!==nativeViewportHeight)pauseGame();
+      nativeViewportWidth=window.innerWidth;nativeViewportHeight=window.innerHeight;
+    });
+  }
+  window.parkourNative={
+    pause:function(){
+      pauseGame();
+      if(nativeHost){
+        store();nativeStorageSet('parkourEnemiesSound',soundEnabled?'on':'off');
+        if(audioContext&&typeof audioContext.suspend==='function')try{
+          var suspension=audioContext.suspend();if(suspension&&suspension.catch)suspension.catch(function(){});
+        }catch(e){}
+      }
+      return userPaused;
+    }
+  };
   checkOrientation();
+  if(nativeHost&&window.__PARKOUR_ACTIVE__===false)window.parkourNative.pause();
+  postToNative({type:'ready'});
